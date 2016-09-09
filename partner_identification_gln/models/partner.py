@@ -26,7 +26,8 @@ class ResPartnerIdCategory(models.Model):
         duplicate_gln = num_obj.search([('category_id', '=', cat),
                                         ('name', '=', id_number.name),
                                         ('name', '!=', False),
-                                        ('id', '!=', id_number.id)])
+                                        ('id', '!=', id_number.id),
+                                        ('partner_id.active', '=', True)])
 
         if duplicate_gln:
             return True
