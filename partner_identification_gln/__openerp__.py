@@ -11,12 +11,15 @@
     'license': 'AGPL-3',
     'author': 'Acsone S.A.,Odoo Community Association (OCA)',
     'website': 'https://www.acsone.eu',
-    'python': ['stdnum'
-               ],
+    'external_dependencies': {
+        'python': ['stdnum'
+                   ],
+    },
     'depends': ['partner_identification'
                 ],
     'data': ['data/partner_identification_gln.xml'
              ],
     'demo': [
     ],
+    'installable': True,
 }

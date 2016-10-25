@@ -1,9 +1,15 @@
 # -*- coding: utf-8 -*-
 # ©  2016 ACSONE SA/NV (<http://acsone.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-from stdnum import ean
-from stdnum.exceptions import InvalidChecksum
+import logging
 from openerp import api, models
+_logger = logging.getLogger(__name__)
+
+try:
+    from stdnum import ean
+    from stdnum.exceptions import InvalidChecksum
+except ImportError:
+    _logger.debug('Cannot `import external dependency python stdnum package`.')
 
 
 class ResPartnerIdCategory(models.Model):
