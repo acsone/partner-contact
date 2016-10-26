@@ -19,7 +19,5 @@
                 ],
     'data': ['data/partner_identification_gln.xml'
              ],
-    'demo': [
-    ],
     'installable': True,
 }
