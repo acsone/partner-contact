@@ -15,6 +15,17 @@ except ImportError:
 class ResPartnerIdCategory(models.Model):
     _inherit = 'res.partner.id_category'
 
+    def _search_duplicate(self, category_id, id_number, force_active=False):
+        domain = [('category_id', '=', category_id),
+                  ('name', '=', id_number.name),
+                  ('name', '!=', False),
+                  ('id', '!=', id_number.id)]
+
+        if force_active:
+            domain.append(('partner_id.active', '=', True))
+        num_obj = self.env['res.partner.id_number']
+        return num_obj.search(domain)
+
     @api.multi
     def validate_res_partner_gln(self, id_number):
         self.ensure_one()
@@ -28,12 +39,7 @@ class ResPartnerIdCategory(models.Model):
 
         cat = self.env.ref('partner_identification_gln.'
                            'partner_identification_gln_number_category').id
-        num_obj = self.env['res.partner.id_number']
-        duplicate_gln = num_obj.search([('category_id', '=', cat),
-                                        ('name', '=', id_number.name),
-                                        ('name', '!=', False),
-                                        ('id', '!=', id_number.id),
-                                        ('partner_id.active', '=', True)])
+        duplicate_gln = self._search_duplicate(cat, id_number, True)
 
         if duplicate_gln:
             return True
@@ -51,11 +57,7 @@ class ResPartnerIdCategory(models.Model):
 
         cat = self.env.ref('partner_identification_gln.'
                            'partner_identification_gcp_number_category').id
-        num_obj = self.env['res.partner.id_number']
-        duplicate_gln = num_obj.search([('category_id', '=', cat),
-                                        ('name', '=', id_number.name),
-                                        ('name', '!=', False),
-                                        ('id', '!=', id_number.id)])
+        duplicate_gln = self._search_duplicate(cat, id_number)
 
         if duplicate_gln:
             return True
