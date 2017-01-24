@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <record model="ir.ui.view" id="res_partner_business_entity_form_view">
+        <field name="name">res.partner.business.entity.form (in partner_business_entity)</field>
+        <field name="model">res.partner.business.entity</field>
+        <field name="arch" type="xml">
+            <form string="business Entities">
+                <group col="4">
+                    <field name="name"/>
+                    <field name="shortcut"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_business_entity_search_view">
+        <field name="name">res.partner.business.entity.search (in partner_business_entity)</field>
+        <field name="model">res.partner.business.entity</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_company_title_tree_view">
+        <field name="name">res.partner.business.entity.tree (in partner_business_entity)</field>
+        <field name="model">res.partner.business.entity</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="shortcut"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="res_partner_business_entity_act_window">
+        <field name="name">Business Entities</field>
+        <field name="res_model">res.partner.business.entity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    
+    <!-- Odoo put partner title menu in sales_team... -->
+    <menuitem action="res_partner_business_entity_act_window" id="menu_partner_business_entity" name="Business Entities" parent="sales_team.menu_config_address_book" sequence="4" groups="base.group_no_one"/>
+
+</odoo>
