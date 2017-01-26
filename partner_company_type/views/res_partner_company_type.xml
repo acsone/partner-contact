@@ -26,9 +26,9 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="res_partner_company_title_tree_view">
-        <field name="name">res.partner.business.entity.tree (in partner_business_entity)</field>
-        <field name="model">res.partner.business.entity</field>
+    <record model="ir.ui.view" id="res_partner_company_type_tree_view">
+        <field name="name">res.partner.company.type.tree (in partner_company_type)</field>
+        <field name="model">res.partner.company.type</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
