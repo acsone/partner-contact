@@ -6,24 +6,24 @@ from odoo.tests import TransactionCase
 from psycopg2 import IntegrityError
 
 
-class BusinessEntityTest(TransactionCase):
+class CompanyTypeTest(TransactionCase):
 
     def setUp(self):
-        super(BusinessEntityTest, self).setUp()
+        super(CompanyTypeTest, self).setUp()
 
         vals = {'name': 'Limited Corporation',
                 'shortcut': 'Ltd.'}
 
-        b_entity_obj = self.env['res.partner.business.entity']
+        c_type_obj = self.env['res.partner.company.type']
 
-        self.entity_ltd = b_entity_obj.create(vals)
+        self.type_ltd = c_type_obj.create(vals)
 
     def test_00_duplicate(self):
-        # Test Duplicate entity
+        # Test Duplicate type
         vals = {'name': 'Limited Corporation',
                 'shortcut': 'Ltd.'}
 
-        b_entity_obj = self.env['res.partner.business.entity']
+        c_type_obj = self.env['res.partner.company.type']
 
         with self.assertRaises(IntegrityError):
-            b_entity_obj.create(vals)
+            c_type_obj.create(vals)

@@ -5,13 +5,13 @@
 from odoo import fields, models
 
 
-class ResPartnerBusinessEntity(models.Model):
+class ResPartnerCompanyType(models.Model):
 
-    _name = 'res.partner.business.entity'
-    _description = 'Partner business Entity'
+    _name = 'res.partner.company.type'
+    _description = 'Partner Company Type'
 
     name = fields.Char(string='Title', required=True, translate=True)
     shortcut = fields.Char(string='Abbreviation', translate=True)
 
     _sql_constraints = [('name_uniq', 'unique (name)',
-                         "Partner Business Entity already exists !")]
+                         "Partner Company Type already exists !")]

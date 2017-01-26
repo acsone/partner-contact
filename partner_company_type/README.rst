@@ -2,14 +2,15 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=======================
-Partner business Entity
-=======================
+====================
+Partner Company Type
+====================
 
 Adds a title to partner that are companies.
 (Before: Partner Title in Odoo - limited to contacts now)
 
-See : :target: https://en.wikipedia.org/wiki/Types_of_business_entity
+See : 
+	:target: https://en.wikipedia.org/wiki/Types_of_business_entity
 
 Usage
 =====
