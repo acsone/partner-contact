@@ -14,7 +14,7 @@
                 'sales_team'
                 ],
     'data': [
-        'security/res_partner_business_entity.xml',
+        'security/res_partner_company_type.xml',
         'views/res_partner_company_type.xml',
         'views/res_partner.xml',
     ],
