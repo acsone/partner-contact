@@ -4,7 +4,7 @@
 
 <odoo>
     <record model="ir.model.access" id="res_partner_company_type_user">
-        <field name="name">res.partner.company.type base</field>
+        <field name="name">res.partner.company.type user</field>
         <field name="model_id" ref="model_res_partner_company_type"/>
         <field name="group_id" ref="base.group_user"/>
         <field name="perm_read" eval="1"/>
