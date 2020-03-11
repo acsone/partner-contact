@@ -34,6 +34,17 @@ class ResPartner(models.Model):
         res = super()._onchange_country_id()
         if self.zip_id and self.zip_id.city_id.country_id != self.country_id:
             self.zip_id = False
+        if self.country_id:
+            city_zip_domain = {
+                "zip_id": [("city_id.country_id", "=", self.country_id.id)]
+            }
+            if isinstance(res, dict):
+                if "domain" in res and isinstance(res["domain"], dict):
+                    res["domain"].update(city_zip_domain)
+                else:
+                    res["domain"] = city_zip_domain
+            else:
+                res = {"domain": city_zip_domain}
         return res
 
     @api.onchange('zip_id')
