@@ -19,7 +19,7 @@
     'category': 'Extra Tools',
     'website': 'https://odoo-community.org/',
     'depends': ['base_setup'],
-    'post_init_hook': 'post_init_hook',
+#    'post_init_hook': 'post_init_hook',
     'data': [
         'views/base_config_view.xml',
         'views/res_partner.xml',
