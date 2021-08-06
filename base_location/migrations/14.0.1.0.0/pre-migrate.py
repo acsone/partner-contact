@@ -1,6 +1,6 @@
 # Copyright 2018-2020 Tecnativa - Pedro M. Baeza
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-
+from psycopg2.extensions import AsIs
 from openupgradelib import openupgrade
 
 
@@ -15,3 +15,8 @@ def migrate(env, version):
         },
     )
     openupgrade.remove_tables_fks(env.cr, ["res_better_zip"])
+    column_name = 'city_id'
+    openupgrade.logged_query(
+        env.cr,
+        "ALTER TABLE res_better_zip ADD %s INTEGER", (AsIs(column_name), ),
+    )
