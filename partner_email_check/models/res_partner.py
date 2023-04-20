@@ -89,11 +89,12 @@ class ResPartner(models.Model):
     def _should_check_deliverability(self):
         return self.env.company.partner_email_check_check_deliverability
 
-    @api.model
-    def create(self, vals):
-        if vals.get("email"):
-            vals["email"] = self.email_check(vals["email"])
-        return super(ResPartner, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get("email"):
+                vals["email"] = self.email_check(vals["email"])
+        return super(ResPartner, self).create(vals_list)
 
     def write(self, vals):
         if vals.get("email"):
