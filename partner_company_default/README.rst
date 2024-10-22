@@ -28,7 +28,15 @@ Partner Company Default
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module assigns default company to res.parnter.
+This module assigns default company to res.partner.
+
+**Table of contents**
+
+.. contents::
+   :local:
+
+Use Cases / Context
+===================
 
 Background
 ----------
@@ -40,11 +48,6 @@ want to seggregate partner records between companies.
 
 ref.
 https://github.com/odoo/odoo/commit/25714692b23624d04a43862db26ebcf802b89399
-
-**Table of contents**
-
-.. contents::
-   :local:
 
 Bug Tracker
 ===========
