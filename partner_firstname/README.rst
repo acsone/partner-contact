@@ -42,9 +42,9 @@ Configuration
 You can configure some common name patterns for the inverse function in
 Settings > General settings:
 
-- Lastname Firstname: For example 'Anderson Robert'
-- Lastname, Firstname: For example 'Anderson, Robert'
-- Firstname Lastname: For example 'Robert Anderson'
+-  Lastname Firstname: For example 'Anderson Robert'
+-  Lastname, Firstname: For example 'Anderson, Robert'
+-  Firstname Lastname: For example 'Robert Anderson'
 
 After applying the changes, you can recalculate all partners name
 clicking "Recalculate names" button. Note: This process could take so
@@ -109,29 +109,29 @@ Authors
 Contributors
 ------------
 
-- Nicolas Bessi <nicolas.bessi@camptocamp.com>
-- Yannick Vaucher <yannick.vaucher@camptocamp.com>
-- Vincent Renaville <vincent.renaville@camptocamp.com>
-- Guewen Baconnier <guewen.baconnier@camptocamp.com>
-- Holger Brunn <hbrunn@terp.nl>
-- Jonathan Nemry <jonathan.nemry@acsone.eu>
-- Olivier Laurent <olivier.laurent@acsone.eu>
-- Sandy Carter <sandy.carter@savoirfairelinux.com>
-- Alexis de Lattre <alexis.delattre@akretion.fr>
-- Lorenzo Battistini <lorenzo.battistini@agilebg.com>
-- Hans Henrik Gabelgaard <hhg@gabelgaard.org>
-- Jairo Llopis <j.llopis@grupoesoc.es>
-- Adrien Peiffer <adrien.peiffer@acsone.eu>
-- Ronald Portier <ronald@therp.nl>
-- Sylvain Van Hoof
-- Pedro Baeza <pedro.baeza@serviciosbaeza.com>
-- Dave Lasley <dave@laslabs.com>
-- Graeme Gellatly <graeme@o4sb.com>
-- Laurent Mignon <laurent.mignon@acsone.eu>
-- Bjorn Billen <bjorn.billen@dynapps.be>
-- Aion Tech <https://aiontech.company/>:
+-  Nicolas Bessi <nicolas.bessi@camptocamp.com>
+-  Yannick Vaucher <yannick.vaucher@camptocamp.com>
+-  Vincent Renaville <vincent.renaville@camptocamp.com>
+-  Guewen Baconnier <guewen.baconnier@camptocamp.com>
+-  Holger Brunn <hbrunn@terp.nl>
+-  Jonathan Nemry <jonathan.nemry@acsone.eu>
+-  Olivier Laurent <olivier.laurent@acsone.eu>
+-  Sandy Carter <sandy.carter@savoirfairelinux.com>
+-  Alexis de Lattre <alexis.delattre@akretion.fr>
+-  Lorenzo Battistini <lorenzo.battistini@agilebg.com>
+-  Hans Henrik Gabelgaard <hhg@gabelgaard.org>
+-  Jairo Llopis <j.llopis@grupoesoc.es>
+-  Adrien Peiffer <adrien.peiffer@acsone.eu>
+-  Ronald Portier <ronald@therp.nl>
+-  Sylvain Van Hoof
+-  Pedro Baeza <pedro.baeza@serviciosbaeza.com>
+-  Dave Lasley <dave@laslabs.com>
+-  Graeme Gellatly <graeme@o4sb.com>
+-  Laurent Mignon <laurent.mignon@acsone.eu>
+-  Bjorn Billen <bjorn.billen@dynapps.be>
+-  Aion Tech <https://aiontech.company/>:
 
-  - Simone Rubino <simone.rubino@aion-tech.it>
+   -  Simone Rubino <simone.rubino@aion-tech.it>
 
 Maintainers
 -----------
