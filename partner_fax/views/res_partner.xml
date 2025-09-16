@@ -15,14 +15,20 @@
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="base.view_partner_form" />
     <field name="arch" type="xml">
-      <field name="function" position="after">
-        <field name="fax" placeholder="Fax..." widget="phone" />
-      </field>
+      <xpath expr="//field[@name='phone']/parent::div" position="after">
+        <div class="d-flex align-items-baseline w-md-50" position="after">
+          <i class="fa fa-fw me-1 fa-fax text-primary" title="Fax" />
+          <field name="fax" class="w-100" widget="phone" placeholder="Fax..." />
+        </div>
+      </xpath>
       <xpath
-        expr="//field[@name='child_ids']/form//field[@name='mobile']"
+        expr="//field[@name='child_ids']//form//field[@name='phone']/parent::div"
         position="after"
       >
-        <field name="fax" placeholder="Fax..." widget="phone" />
+        <div class="d-flex align-items-baseline w-md-50" position="after">
+          <i class="fa fa-fw me-1 fa-fax text-primary" title="Fax" />
+          <field name="fax" class="w-100" widget="phone" placeholder="Fax..." />
+        </div>
       </xpath>
     </field>
   </record>
